@@ -1,6 +1,6 @@
 {
   "name": "sample_web",
-  "version": "0.0.2-SNAPSHOT",
+  "version": "1.0.0-SNAPSHOT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode development",

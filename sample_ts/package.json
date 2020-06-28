@@ -1,6 +1,6 @@
 {
   "name": "sample_ts",
-  "version": "0.0.2-SNAPSHOT",
+  "version": "1.0.0-SNAPSHOT",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
