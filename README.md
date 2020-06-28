@@ -10,20 +10,137 @@
   </a>
 </p>
 
-# uipath-orchestrator-api-node-samples
+
 
 [UiPath Orchestrator のAPI](https://docs.uipath.com/orchestrator/lang-ja/reference#about-odata-and-references) を Node.jsから呼び出すライブラリ[uipath-orchestrator-api-node](https://github.com/masatomix/uipath-orchestrator-api-node)のサンプルです。。
 
+環境構築をして、動かしてみましょう。
 
 
-など設定して、適宜表示を制御してください。
+## 環境構築
+
+### Node.jsのインストール
+
+インストールの方法はいろいろとあるのですが、シンプルにやるなら公式のインストーラを使えばOK。
+
+(つぎへつぎへ、でデフォルト選択でOKです)
+
+インストーラは2020/06/29 現在、 https://nodejs.org/dist/v12.18.1/node-v12.18.1-x64.msi などでよいでしょう。
 
 
-## source and npm repository
 
-**ソースコードやnpmのリポジトリ**です。
+最終的に
 
-- https://github.com/masatomix/uipath-orchestrator-api-node-samples
+```console
+Z:\>node --version
+v12.18.1
+
+Z:\>npm --version
+6.14.5
+
+Z:\>
+```
+
+となればOKです。
+
+
+### サンプルコードを取得
+
+https://github.com/masatomix/uipath-orchestrator-api-node-samples
+
+よりソースを取得します。GitHubなどを扱ったことがないかたは、[GitHubでソースコード管理するハンズオン](https://qiita.com/masatomix/items/a3f99a1700a835e845dd) などの記事などを参考にして、適宜SourceTree等でソースをダウンロードしてください。
+
+コマンドラインからGitを操作する場合は
+
+```console
+Z:\git> git clone https://github.com/masatomix/uipath-orchestrator-api-node-samples
+Cloning into 'uipath-orchestrator-api-node-samples'...
+remote: Enumerating objects: 108, done.
+remote: Counting objects: 100% (108/108), done.
+..
+Z:\git> cd uipath-orchestrator-api-node-samples
+Z:\git\uipath-orchestrator-api-node-samples>
+
+```
+
+でOKです。
+
+
+## やってみる
+
+さてやってみます。UiPath Orchestrator APIを使用するために、OCのURLやユーザ情報などを記載した設定ファイルを ``config\local.json`` に作成します。
+
+
+
+Enterprise版の場合
+
+
+```console
+Z:\git\uipath-orchestrator-api-node-samples> cd sample_js
+Z:\git\uipath-orchestrator-api-node-samples\sample_js>t ype config\local.json
+{
+  "userinfo": {
+    "tenancyName": "default",
+    "usernameOrEmailAddress": "admin",
+    "password": "xxxxxx",
+    "organizationUnit": 1
+  },
+  "serverinfo": {
+    "servername": "https://[OrchestratorのURL]/"
+  }
+}
+
+```
+
+Community版の場合
+
+
+
+xxx
+
+
+
+```console
+{
+  "serverinfo1": {
+    "servername": "https://platform.uipath.com/xxx/xxx/",
+    "refresh_token": "xxx",
+    "tenant_logical_name": "xxx",
+    "client_id": "xxx"
+  },
+  "userinfo1": {
+    "tenancyName": "default",
+    "usernameOrEmailAddress": "xxxxxx",
+    "password": "xxx",
+    "organizationUnit": 1
+  }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## その他
+
+### 実行してみる(TypeScript)
+
+そのうちQiita化します
+
+
+
+### 実行してみる(Webから)
+
+そのうちQiita化します
+
 
 
 ## Revision history
