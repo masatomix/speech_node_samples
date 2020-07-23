@@ -2,6 +2,7 @@
   <span>
     <button v-on:click="startRec()" v-if="!executeFlag">録音</button>
     <button v-on:click="stopRec()" v-if="executeFlag">録音停止</button>
+    <div v-if="audioType != ''">音声形式: {{ audioType }}</div>
   </span>
 </template>
 
