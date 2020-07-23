@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/google">Google Speechの音声認識</router-link>|
+      <router-link to="/browser">ブラウザの音声認識</router-link>|
+      <router-link to="/rec">ダウンロード</router-link>
     </div>
     <router-view />
   </div>
