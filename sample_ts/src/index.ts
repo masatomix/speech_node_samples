@@ -6,11 +6,11 @@ async function main() {
   const client = new speech.SpeechClient()
 
   // The name of the audio file to transcribe
-  const fileName = 'sample.wav'
+  const fileName = './sample.wav'
 
   // Reads a local audio file and converts it to base64
-  const file = fs.readFileSync(fileName)
-  const audioBytes = file.toString('base64')
+  const file: Buffer = fs.readFileSync(fileName)
+  const audioBytes: string = file.toString('base64')
 
   // console.log(audioBytes)
   // The audio file's encoding, sample rate in hertz, and BCP-47 language code
