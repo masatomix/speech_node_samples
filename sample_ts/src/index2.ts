@@ -1,5 +1,6 @@
 import fs from 'fs'
 import request from 'request'
+import firebaseConfig from './firebaseConfig'
 
 const createRequestPromise = (option: any): Promise<Array<any>> => {
   const promise: Promise<any> = new Promise((resolve, reject) => {
@@ -22,14 +23,14 @@ const createRequestPromise = (option: any): Promise<Array<any>> => {
 }
 
 function main() {
-  const API_KEY = 'xxx'
+  const API_KEY = firebaseConfig.apiKey
 
   // The name of the audio file to transcribe
-  const fileName = 'sample.wav'
+  const fileName = './sample.wav'
 
   // Reads a local audio file and converts it to base64
-  const file = fs.readFileSync(fileName)
-  const audioBytes = file.toString('base64')
+  const file: Buffer = fs.readFileSync(fileName)
+  const audioBytes: string = file.toString('base64')
 
   // console.log(audioBytes)
   // The audio file's encoding, sample rate in hertz, and BCP-47 language code
@@ -37,6 +38,7 @@ function main() {
     enableAutomaticPunctuation: true,
     encoding: 'LINEAR16',
     languageCode: 'ja-JP',
+    // sampleRateHertz: 48000,
     model: 'default',
   }
   // const config = {
@@ -64,8 +66,8 @@ function main() {
     },
     json: request,
   }
+  // Object.assign(option, { proxy: 'http://192.168.10.202:8888', strictSSL: false })
   // console.log(option.uri)
-  // Object.assign(option, { proxy: 'http://192.168.xx.xx:8888', strictSSL: false })
 
   createRequestPromise(option)
     .then((response: any) => {
