@@ -361,4 +361,4 @@ Channel layout: Mono
 - [safari(ios)でMediaRecorderを使う](https://qiita.com/ameminn_/items/8ff46a81f93573b7ccca)
 - [たった17行のコードで音声自動文字起こしを実装する](https://qiita.com/kolife/items/a0af7702eef05994fbfb)  web speech API をつかったシンプルな例
 - [Google Speech to Text APIを使ってブラウザでリアルタイム文字起こしする](https://qiita.com/kawazu255/items/263ab168d0522495529d) Web Speech API + Google Cloud Speech-to-Text の合わせ技。Chrome Onlyになっちゃうけど。
-- [音声入力できる入力コンポーネントを作る](https://qiita.com/Sa2Knight/items/a7deb5b5d07820f6f19e) [Web Speech API をつかったVue.jsの例
+- [音声入力できる入力コンポーネントを作る](https://qiita.com/Sa2Knight/items/a7deb5b5d07820f6f19e) Web Speech API をつかったVue.jsの例
