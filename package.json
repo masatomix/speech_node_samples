@@ -1,6 +1,6 @@
 {
   "name": "samples",
-  "version": "0.0.2-SNAPSHOT",
+  "version": "1.1.0",
   "description": "UiPath Orchestrator API wrapper for Node.js samples",
   "scripts": {
     "build:ts": "cd sample_ts && npm run build",
@@ -10,13 +10,11 @@
     "cleanDist:ts": "rimraf sample_ts/dist/*",
     "cleanDist:web": "rimraf sample_web/dist/*",
     "cleanNode:ts": "npm run cleanDist:ts && rimraf sample_ts/node_modules/* sample_ts/package-lock.json",
-    "cleanNode:js": "rimraf sample_js/node_modules/* sample_js/package-lock.json",
     "cleanNode:web": "npm run cleanDist:web && rimraf sample_web/node_modules/* sample_web/package-lock.json",
-    "cleanNode": "npm-run-all cleanNode:ts cleanNode:js cleanNode:web",
+    "cleanNode": "npm-run-all cleanNode:ts cleanNode:web",
     "i:ts": "npm run cleanNode:ts && cd sample_ts && npm i ",
-    "i:js": "npm run cleanNode:js && cd sample_js && npm i ",
     "i:web": "npm run cleanNode:web && cd sample_web && npm i",
-    "i": "npm-run-all i:ts i:js i:web",
+    "i": "npm-run-all i:ts i:web",
     "dev:ts": "npm run build:ts && cd sample_ts && ts-node src/index.ts",
     "dev:js": "cd sample_js && node index.js",
     "dev:web": "cd sample_web && npm run serve"
