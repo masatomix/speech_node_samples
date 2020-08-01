@@ -1,22 +1,20 @@
 <template>
-  <div class="hello">
-    <p>
+  <v-container class="grey lighten-5">
+    <p class="ma-0">
       「ブラウザ音声認識 開始」をクリックすると、音声認識を開始します。
     </p>
-    <p>
-      音声認識は発話の区切りで適宜画面表示されます。
-    </p>
-    <p>
-      「ブラウザ音声認識 終了」で音声認識を停止します
-    </p>
-    <p>
+    <p class="ma-0">音声認識は発話の区切りで適宜画面表示されます。</p>
+    <p class="ma-0">「ブラウザ音声認識 終了」で音声認識を停止します</p>
+    <p class="ma-0">
       使用している SpeechRecognition
       という音声認識ライブラリはDesktopのChromeでしか動作しないようです┐('〜`;)┌
     </p>
-    <SpeechButton v-model="message" />
-    <button v-on:click="clear">clear</button>
-    <div style="white-space:pre-wrap; word-wrap:break-word;">{{ message }}</div>
-  </div>
+    <SpeechButton v-model="message" class="pa-1" />
+    <v-btn v-on:click="clear" color="primary" dark>clear</v-btn>
+    <div style="white-space:pre-wrap; word-wrap:break-word;">
+      {{ message }}
+    </div>
+  </v-container>
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
   <span>
-    <button v-on:click="startRec()" v-if="!executeFlag">
-      Google音声認識 開始
-    </button>
-    <button v-on:click="stopRec()" v-if="executeFlag">
+    <v-btn v-on:click="startRec()" v-if="!executeFlag" color="primary" dark>
+      Google音声認識 開始 <v-icon>g_translate</v-icon>
+    </v-btn>
+    <v-btn v-on:click="stopRec()" v-if="executeFlag" color="primary" dark>
       Google音声認識 終了
-    </button>
+    </v-btn>
   </span>
 </template>
 
@@ -149,12 +149,15 @@ export default {
         this.createRequestPromise(option)
           .then(response => {
             console.log(response)
-            // console.log(response.results)
-            const transcription = response.results
-              .map(result => result.alternatives[0].transcript)
-              .join('\n')
-            console.log(`Transcription: ${transcription}`)
-            this.message = `${this.message}${transcription}\n`
+            if (response.results) {
+              const transcription = response.results
+                .map(result => result.alternatives[0].transcript)
+                .join('\n')
+              console.log(`Transcription: ${transcription}`)
+              this.message = `${this.message}${transcription}\n`
+            } else {
+              this.message = `${this.message}[認識できる音声がありませんでした]\n`
+            }
           })
           .catch(error => console.log(error))
       }
