@@ -1,24 +1,26 @@
 <template>
-  <div class="hello">
-    <p>
+  <v-container class="grey lighten-5">
+    <p class="ma-0">
       「Google音声認識 開始」をクリックすると、音声認識を開始します。
     </p>
-    <p>
+    <p class="ma-0">
       「Google音声認識 終了」で音声をGoogle Speech-to-Text
       へ送信し、結果を画面表示します。
     </p>
-    <p>
+    <p class="ma-0">
       音声録音は様々なブラウザで稼働するAudioContextを使用したので多数のブラウザで動くはず。
       (MacのFirefox/Safari/Chrome,iPhone/iPadのSafariで動作確認済み)
     </p>
-    <p>
+    <p class="ma-0">
       方式は具体的には「音声録音 → 音声を wav形式に変換 → Google
       Speech-to-Textへデータ送信」とやっています。
     </p>
-    <GoogleSpeechButton v-model="message" />
-    <button v-on:click="clear">clear</button>
-    <div style="white-space:pre-wrap; word-wrap:break-word;">{{ message }}</div>
-  </div>
+    <GoogleSpeechButton v-model="message" class="pa-1" />
+    <v-btn v-on:click="clear" color="primary" dark>clear</v-btn>
+    <div style="white-space:pre-wrap; word-wrap:break-word;">
+      {{ message }}
+    </div>
+  </v-container>
 </template>
 
 <script>

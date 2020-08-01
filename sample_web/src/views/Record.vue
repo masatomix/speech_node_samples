@@ -1,13 +1,13 @@
 <template>
-  <div class="hello">
-    <p>
+  <v-container class="grey lighten-5">
+    <p class="ma-0">
       「録音」をクリックすると、音声録音を開始します。「録音停止」で音声データをダウンロードできます。
     </p>
-    <p>
+    <p class="ma-0">
       Safari系(Mac/iPhone/iPad)の場合は、設定で「実験的な機能>>MediaRecorderをOnにしてください」
     </p>
     <RecordButton />
-  </div>
+  </v-container>
 </template>
 
 <script>
