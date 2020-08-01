@@ -1,7 +1,7 @@
 {
-  "name": "samples",
+  "name": "speech_node_samples",
   "version": "1.1.0",
-  "description": "UiPath Orchestrator API wrapper for Node.js samples",
+  "description": "speech_node_samples",
   "scripts": {
     "build:ts": "cd sample_ts && npm run build",
     "build:web": "cd sample_web && npm run build",
@@ -16,12 +16,11 @@
     "i:web": "npm run cleanNode:web && cd sample_web && npm i",
     "i": "npm-run-all i:ts i:web",
     "dev:ts": "npm run build:ts && cd sample_ts && ts-node src/index.ts",
-    "dev:js": "cd sample_js && node index.js",
     "dev:web": "cd sample_web && npm run serve"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masatomix/uipath-orchestrator-api-node.git"
+    "url": "git+https://github.com/masatomix/speech_node_samples.git"
   },
   "keywords": [
     "uipath",
@@ -30,9 +29,9 @@
   "author": "Masatomi KINO",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/masatomix/uipath-orchestrator-api-node/issues"
+    "url": "https://github.com/masatomix/speech_node_samples/issues"
   },
-  "homepage": "https://github.com/masatomix/uipath-orchestrator-api-node#readme",
+  "homepage": "https://github.com/masatomix/speech_node_samples#readme",
   "devDependencies": {
     "@types/bunyan": "^1.8.6",
     "@types/config": "0.0.36",
