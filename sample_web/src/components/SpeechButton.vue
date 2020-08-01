@@ -1,7 +1,9 @@
 <template>
-  <v-btn v-on:click="toggleRecognition()" color="primary" dark
-    >{{ label }} <v-icon v-if="!executeFlag">keyboard_voice</v-icon></v-btn
-  >
+  <span>
+    <v-btn v-on:click="toggleRecognition()" color="primary" dark
+      >{{ label }} <v-icon v-if="!executeFlag">keyboard_voice</v-icon></v-btn
+    >
+  </span>
 </template>
 
 <script>
