@@ -1,6 +1,6 @@
 {
   "name": "speech_node_samples",
-  "version": "1.1.0",
+  "version": "1.1.1-SNAPSHOT",
   "description": "speech_node_samples",
   "scripts": {
     "build:ts": "cd sample_ts && npm run build",
